@@ -1,6 +1,6 @@
-# 🤖 Job Alert Bot — GenAI/AI Engineer Roles → Telegram
+# 🤖 Job Alert Bot — SDE Engineer Roles → Telegram
 
-Scrapes LinkedIn for GenAI/AI Engineer jobs in Ireland and sends new listings
+Scrapes LinkedIn for SDE jobs in Ireland and sends new listings
 to your Telegram every hour via GitHub Actions. Fully free to run.
 
 ---
@@ -53,10 +53,10 @@ git push -u origin main
 
 In your repo → **Settings → Secrets and variables → Actions → New repository secret**
 
-| Secret name           | Value                    |
-|-----------------------|--------------------------|
-| `TELEGRAM_BOT_TOKEN`  | your bot token from Step 1 |
-| `TELEGRAM_CHAT_ID`    | your chat ID from Step 1   |
+| Secret name          | Value                      |
+| -------------------- | -------------------------- |
+| `TELEGRAM_BOT_TOKEN` | your bot token from Step 1 |
+| `TELEGRAM_CHAT_ID`   | your chat ID from Step 1   |
 
 ### Step 4 — Enable Actions
 
@@ -89,6 +89,7 @@ Each scraper lives in `scrapers/`. To add Indeed for example:
 3. Uncomment the call in `main.py`
 
 The dict shape every scraper must return:
+
 ```python
 {
     "title":    str,
@@ -111,7 +112,7 @@ roles you want. The filter checks title + company name.
 ## Telegram message preview
 
 ```
-🤖 3 new GenAI/AI jobs found!
+🤖 3 new SDE jobs found!
 
 1. AI Engineer
 🏢 Accenture Ireland
